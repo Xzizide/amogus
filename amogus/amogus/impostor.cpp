@@ -31,15 +31,15 @@ double impostor::crewmate(double round, int decimals) {
 		if (to_string(round)[i] == '.') {
 			if (to_string(round)[i + decimals] >= '5') {
 				int pos = to_string(round).find('.');
-				pos = pos + decimals;
+				pos = pos + decimals + 1;
 				string fixed = to_string(round).substr(0, pos);
-				return double(stoi(fixed)) + 1;
+				return (double)atof(fixed.c_str());
 			}
 			else {
 				int pos = to_string(round).find('.');
-				pos = pos + decimals;
+				pos = pos + decimals+1;
 				string fixed = to_string(round).substr(0, pos);
-				return double(stoi(fixed));
+				return (double)atof(fixed.c_str());
 			}
 		}
 	}

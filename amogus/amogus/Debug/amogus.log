@@ -1,4 +1,2 @@
-﻿  impostor.cpp
-C:\Users\emil.andersson20\Documents\GitHub\amogus\amogus\amogus\impostor.cpp(14,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\emil.andersson20\Documents\GitHub\amogus\amogus\amogus\impostor.cpp(30,20): warning C4018: '<': signed/unsigned mismatch
+﻿  main.cpp
   amogus.vcxproj -> C:\Users\emil.andersson20\Documents\GitHub\amogus\amogus\Debug\amogus.exe
