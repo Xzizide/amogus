@@ -25,3 +25,23 @@ int impostor::crewmate(double round) {
 	}
 	return int(round);
 }
+
+double impostor::crewmate(double round, int decimals) {
+	for (int i = 0; i < to_string(round).length(); i++) {
+		if (to_string(round)[i] == '.') {
+			if (to_string(round)[i + decimals] >= '5') {
+				int pos = to_string(round).find('.');
+				pos = pos + decimals;
+				string fixed = to_string(round).substr(0, pos);
+				return double(stoi(fixed)) + 1;
+			}
+			else {
+				int pos = to_string(round).find('.');
+				pos = pos + decimals;
+				string fixed = to_string(round).substr(0, pos);
+				return double(stoi(fixed));
+			}
+		}
+	}
+	return double(round);
+}

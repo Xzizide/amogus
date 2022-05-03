@@ -17,4 +17,5 @@ class impostor
 	void sus(int antal);
 
 	int crewmate(double round);
+	double crewmate(double round, int decimals);
 };
