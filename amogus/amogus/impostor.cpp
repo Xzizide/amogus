@@ -11,37 +11,52 @@ void impostor::sus(int antal) {
 	say("antal susses: " + to_string(antal));
 }
 int impostor::crewmate(double round) {
-	for (int i = 0; i < to_string(round).length(); i++) {
-		if (to_string(round)[i] == '.') {
-			if (to_string(round)[i + 1] >= '5') {
-				string fixed = to_string(round).substr(0, to_string(round).find(".", 0));
-				return stoi(fixed) + 1;
-			}
-			else {
-				string fixed = to_string(round).substr(0, to_string(round).find(".", 0));
-				return stoi(fixed);
-			}
-		}
+	string number = to_string(round);
+	if (number[number.find('.') + 1] >= '5') {
+		string fixed = to_string(round).substr(0, to_string(round).find(".", 0));
+		return stoi(fixed) + 1;
 	}
-	return int(round);
+	else
+	{
+		string fixed = to_string(round).substr(0, to_string(round).find(".", 0));
+		return stoi(fixed);
+	}
 }
 
 double impostor::crewmate(double round, int decimals) {
-	for (int i = 0; i < to_string(round).length(); i++) {
-		if (to_string(round)[i] == '.') {
-			if (to_string(round)[i + decimals] >= '5') {
-				int pos = to_string(round).find('.');
-				pos = pos + decimals + 1;
-				string fixed = to_string(round).substr(0, pos);
-				return (double)atof(fixed.c_str());
-			}
-			else {
-				int pos = to_string(round).find('.');
-				pos = pos + decimals+1;
-				string fixed = to_string(round).substr(0, pos);
-				return (double)atof(fixed.c_str());
-			}
+	string number = to_string(round);
+
+	if (number[number.find('.') + decimals + 1] >= '5') {
+		int pos = number.find('.') + decimals + 1;
+		string fixed = number.substr(0, pos);
+		double result = (double)atof(fixed.c_str());
+		result += baka(10, -1 * decimals);
+		return result;
+	}
+	else {
+		int pos = number.find('.') + decimals + 1;
+		string fixed = number.substr(0, pos);
+		return (double)atof(fixed.c_str());
+	}
+
+	return double(round);
+}
+
+double impostor::baka(double number, int power) { //to the power of
+	double result = 1;
+	if (power > 0) {
+		for (int i = 0; i < power; i++) {
+			result *= number;
 		}
 	}
-	return double(round);
+	else if (power < 0) {
+		for (int i = 0; i < (power*-1); i++) {
+			result *= number;
+		}
+		result = 1 / result;
+	}
+	else
+		return 1;
+	
+	return result;
 }

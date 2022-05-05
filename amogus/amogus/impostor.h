@@ -18,4 +18,6 @@ class impostor
 
 	int crewmate(double round);
 	double crewmate(double round, int decimals);
+
+	double baka(double number, int power);
 };
