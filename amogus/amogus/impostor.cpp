@@ -7,8 +7,16 @@ double impostor::together(double n1, double n2) {
 void impostor::say(string message) {
 	cout << message + '\n';
 }
-void impostor::sus(int antal) {
-	
+void impostor::sus() {
+	say("     ________");
+	say("    /        \\");
+	say(" __|      ____|__");
+	say("|  |     /       \\");
+	say("|  |     \\_______/");
+	say("|__|           |");
+	say("   |    ___    |");
+	say("   |   |   |   |");
+	say("   |___|   |___|");
 }
 int impostor::crewmate(double round) {
 	string number = to_string(round);

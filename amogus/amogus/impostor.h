@@ -26,7 +26,7 @@ class impostor
 		say(messages...);
 	}
 
-	void sus(int antal);
+	void sus();
 
 	int crewmate(double round);
 	double crewmate(double round, int decimals);
