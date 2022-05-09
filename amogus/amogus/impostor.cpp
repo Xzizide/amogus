@@ -8,7 +8,7 @@ void impostor::say(string message) {
 	cout << message + '\n';
 }
 void impostor::sus(int antal) {
-	say("antal susses: " + to_string(antal));
+	
 }
 int impostor::crewmate(double round) {
 	string number = to_string(round);
