@@ -1,2 +1,7 @@
-﻿  main.cpp
-  amogus.vcxproj -> C:\Users\emil.andersson20\Documents\GitHub\amogus\amogus\Debug\amogus.exe
+﻿  impostor.cpp
+  main.cpp
+C:\Users\emil.andersson20\Documents\GitHub\amogus\amogus\amogus\main.cpp(14,22): error C2065: 'WindowProc': undeclared identifier
+C:\Users\emil.andersson20\Documents\GitHub\amogus\amogus\amogus\main.cpp(15,20): error C2065: 'hInstance': undeclared identifier
+C:\Users\emil.andersson20\Documents\GitHub\amogus\amogus\amogus\main.cpp(33,9): error C2065: 'hInstance': undeclared identifier
+C:\Users\emil.andersson20\Documents\GitHub\amogus\amogus\amogus\main.cpp(42,22): error C2065: 'nCmdShow': undeclared identifier
+  Generating Code...

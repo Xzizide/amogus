@@ -68,3 +68,4 @@ double impostor::baka(double number, int power) { //to the power of
 	
 	return result;
 }
+
